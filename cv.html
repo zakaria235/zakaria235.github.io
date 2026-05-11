@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Mon CV Interactif </title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="cv.css" />
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <div class="profile-photo">
+        <img src="WhatsApp Image 2026-05-11 at 3.08.35 PM.jpeg" alt="Photo de profil" />
+      </div>
+      <div class="header-info">
+        <h1> Amazigh Zakaria </h1>
+        <p class="titre">Étudiant en Licence L2 · Développement Web</p>
+        <div class="contacts">
+          <a href="mailto:votre@email.com"><i class="fa fa-envelope"></i> z.amazigh1940@uca.ac.ma</a>
+          <a href="https://linkedin.com/in/votre-profil" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/zakaria-amazigh</a>
+          <a href="https://github.com/votre-username" target="_blank"><i class="fab fa-github"></i> zakaria235</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav id="navbar">
+    <button class="nav-btn active" data-section="about">À propos</button>
+    <button class="nav-btn" data-section="skills">Compétences</button>
+    <button class="nav-btn" data-section="formation">Formation</button>
+    <button class="nav-btn" data-section="projects">Projets</button>
+    <button class="nav-btn" data-section="contact">Contact</button>
+  </nav>
+
+
+  <main>
+
+    <!-- 3.2 À PROPOS -->
+    <section id="about" class="cv-section active">
+      <h2 class="section-title">À Propos</h2>
+      <p>
+       Bonjour ! Je suis étudiant en Licence L2 Informatique à la Faculté des Sciences Semlalia (FSSM), passionné par le développement web et les nouvelles technologies.
+    J’ai acquis des compétences en HTML, CSS, JavaScript et en programmation orientée objet, et je développe actuellement mes connaissances en React et dans les technologies front-end modernes.
+    Curieux et motivé, j’aime apprendre de nouvelles technologies et travailler sur des projets qui me permettent d’améliorer continuellement mes compétences.
+      </p>
+      <br>
+      <br>
+    </section>
+
+    <!-- 3.3 COMPÉTENCES -->
+    <section id="skills" class="cv-section">
+      <h2 class="section-title">Compétences</h2>
+      <div class="skills-grid">
+
+        <div class="skill-item">
+          <span class="skill-name">HTML / CSS</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar" data-level="90"></div>
+          </div>
+          <span class="skill-percent">90%</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar" data-level="75"></div>
+          </div>
+          <span class="skill-percent">75%</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">jQuery</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar" data-level="60"></div>
+          </div>
+          <span class="skill-percent">60%</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">React</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar" data-level="50"></div>
+          </div>
+          <span class="skill-percent">50%</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">c/c++</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar" data-level="70"></div>
+          </div>
+          <span class="skill-percent">70%</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Python</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar" data-level="55"></div>
+          </div>
+          <span class="skill-percent">55%</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3.4 FORMATION -->
+    <section id="formation" class="cv-section">
+      <h2 class="section-title">Formation</h2>
+      <div class="accordion">
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <i class="fa fa-graduation-cap"></i>
+            Licence L2 Informatique — Université UCA(2024–2025)
+            <i class="fa fa-chevron-down arrow"></i>
+          </button>
+          <div class="accordion-body">
+            <p>Cours principaux : Algorithmes, programmation orientée objet (Poo) en c++, systeme d'exploitation 1 et 2 , Programmation Web 1 et 2, Bases de données, langage Python  et c 
+                , structures de données , UML , et d'autres.
+
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.5 PROJETS — rendu par React -->
+    <section id="projects" class="cv-section">
+      <h2 class="section-title">Expériences &amp; Projets</h2>
+      <div id="react-projects-root"></div>
+    </section>
+
+    <!-- 3.6 CONTACT — composant React + validation jQuery -->
+    <section id="contact" class="cv-section">
+      <h2 class="section-title">Contact</h2>
+      <div id="react-contact-root"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Amazigh Zakaria — CV Personnel Interactif</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+
+  <script src="cv.js"></script>
+
+  <script type="text/babel" src="react-components.js"></script>
+
+</body>
+</html>
